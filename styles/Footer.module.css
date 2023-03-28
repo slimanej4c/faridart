@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  
+  .footerlogo {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .footercontact {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footercontact p {
+    margin: 0;
+  }
+  
+  .verticalline {
+    height: 20px;
+    width: 1px;
+    background-color: #fff;
+    margin: 0 1rem;
+  }
+  
+  .footercopyright {
+    font-size: 0.7rem;
+  }
+  
