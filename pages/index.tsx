@@ -21,7 +21,7 @@ export default function Home() {
             <p className={styles.homeSousTitre}>Bienvenue sur le site de notre Atelier de Fabrication de Vaisselle en Aluminium !</p>
           </div>
           <div className={styles.homeImage1}>
-            <Image src={"/static/images/img1.png"} alt="img1" width={450} height={450} />
+            <Image src={"/static/images/img1.png"} alt="img_0" width={450} height={450} />
           </div>
          
           
