@@ -4,9 +4,29 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 const SliderWrapper = styled.div`
+  position: relative;
   .carousel .control-arrow {
     top: 50%;
     transform: translateY(-50%);
+    position: absolute;
+    z-index: 2;
+    background-color: green;
+    border: 1px solid lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .carousel .control-prev {
+    left: 0;
+  }
+  .carousel .control-next {
+    right: 0;
+  }
+  .carousel .thumbs-wrapper {
+    display: none;
+  }
+  .carousel .slide {
+    display: flex;
+    justify-content: center;
   }
 `;
 

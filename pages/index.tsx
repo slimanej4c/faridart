@@ -3,10 +3,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import Slider from "../comps/Slider";
+import Sliderr from "../comps/Sliderr";
 
 export default function Home() {
+  const textVariants = {
+    visible: {
+      transition: {
+        staggerChildren: 0.01
+      }
+    },
+    hidden: {
+      transition: {
+        staggerChildren: 0.01
+      }
+    }
+  };
+
+  const letterVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 50 }
+  };
+
+  const text1= "Farid Aluminium ";
+  const text2 = "Bienvenue sur le site de notre Atelier de Fabrication de Vaisselle en Aluminium";
 
   return (
     <>
@@ -16,10 +37,28 @@ export default function Home() {
       
       <div className={styles.homeContainer}>
         <div className={styles.homeSousContainer1}>
-          <div className={styles.homeAccueil}>
-            <h1 className={styles.homeTitle}>FARID Aluminium</h1>
-            <p className={styles.homeSousTitre}>Bienvenue sur le site de notre Atelier de Fabrication de Vaisselle en Aluminium !</p>
-          </div>
+        <motion.div 
+      className={styles.homeAccueil} 
+      initial="hidden"
+      animate="visible"
+      variants={textVariants}
+    >
+      {text1.split("").map((char, index) => {
+        return (
+          <motion.span key={char + "-" + index} variants={letterVariants}   className={styles.homeTitle } >
+            {char}
+          </motion.span>
+        );
+      })}
+      <br/>
+       {text2.split("").map((char, index) => {
+        return (
+          <motion.span key={char + "-" + index} variants={letterVariants}  className={styles.homeSousTitre } >
+            {char}
+          </motion.span>
+        );
+      })}
+    </motion.div>
           <div className={styles.homeImage1}>
             <Image src={"/static/images/img1.png"} alt="img_0" width={450} height={450} />
           </div>
@@ -41,7 +80,7 @@ export default function Home() {
             <h1 className={styles.homeProduitTitle}>Nos produits</h1>
             <div className={styles.homeSlider}>
            
-            <Slider />
+            <Sliderr />
                 
             </div>
           </div>

@@ -1,36 +1,49 @@
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #222;
-    color: #fff;
-    font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 50px;
   }
   
-  .footerlogo {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
+  .footerlogo h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
   }
   
   .footercontact {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
   }
   
-  .footercontact p {
-    margin: 0;
+  .contactinfo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  transition: all 0.2s ease;
+  }
+  
+  .contactinfo:hover {
+  transform: translateY(-5px);
+  }
+  
+  .icon {
+  font-size: 24px;
+  margin-right: 10px;
   }
   
   .verticalline {
-    height: 20px;
-    width: 1px;
-    background-color: #fff;
-    margin: 0 1rem;
+  width: 2px;
+  height: 20px;
+  background-color: #fff;
+  margin: 0 20px;
   }
   
   .footercopyright {
-    font-size: 0.7rem;
+  margin-top: 20px;
   }
-  
